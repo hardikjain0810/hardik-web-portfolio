@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Hardik Jain Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Hardik Jain Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-hero">
+            <div class="contact-content">
+                <h1>Get In Touch</h1>
+                <p>Have a question or want to work together? Reach out to me!</p>
+            </div>
+        </section>
+
+        <section class="contact-form-section">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Contact Information</h2>
+                    <p>Feel free to reach out to me through any of the following methods:</p>
+                    
+                    <div class="contact-method">
+                        <h3>Email</h3>
+                        <p><a href="mailto:hj791983@outlook.com">hj791983@outlook.com</a></p>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <h3>Phone</h3>
+                        <p>+91 9392996731</p>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <h3>Social Media</h3>
+                        <div class="social-links-contact">
+                            <a href="https://github.com/hardikjain0810" target="_blank">GitHub</a>
+                            <a href="https://www.linkedin.com/in/hardikjain0810/" target="_blank">LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h2>Send Me a Message</h2>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Hardik Jain Portfolio. All rights reserved.</p>
+    
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Simple form handling with JavaScript
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // In a real application, you would send this data to a server
+            // For GitHub Pages, you might use a service like Formspree
+            
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value
+            };
+            
+            // For demonstration purposes, we'll just log the data and show an alert
+            console.log('Form submitted:', formData);
+            alert('Thank you for your message! In a real application, this would be sent to a server.');
+            
+            // Reset the form
+            this.reset();
+        });
+    </script>
+</body>
+</html>
